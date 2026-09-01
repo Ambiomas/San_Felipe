@@ -180,17 +180,17 @@
 
         <!-- ===== Texto de créditos en el footer ===== -->
         <div id="footer-creditos">
-            Este proyecto fue posible gracias al apoyo de Empresa. Cita sugerida: Autores (2026). "Restauración forestal en San Felipe" [mapa web]
+            Este proyecto fue posible gracias al apoyo de Red de Carreteras de Occidente, an Abertis company.
         </div>
 
         <!-- ===== Panel de aviso legal (modal) ===== -->
         <div id="modal-aviso">
             <div id="modal-contenido">
-                <h2>📋 Aviso de uso</h2>
+                <h2>Aviso de uso</h2>
                 <p style="color:#555; font-size:14px;">Al utilizar este mapa, aceptas los siguientes términos:</p>
                 <ul>
-                    <li><strong>✅ Solo para fines educativos y académicos</strong></li>
-                    <li><strong>🚫 No reproducción total o parcial con fines comerciales sin autorización explícita</strong></li>
+                    <li><strong>Solo para fines educativos y académicos</strong></li>
+                    <li><strong>No reproducción total o parcial con fines comerciales sin autorización explícita</strong></li>
                 </ul>
                 <div class="checkbox-container">
                     <input type="checkbox" id="chk-acepto">
@@ -205,9 +205,13 @@
         <!-- Contenedor de botones (arriba de los logos) -->
         <div id="botones-container">
             <a href="https://www.inaturalist.org/projects/registro-de-vegetacion-en-un-poligono-de-reforestacion-en-san-felipe-los-alzati-zitacuaro-mexico" target="_blank" class="btn-custom btn-inaturalist">Proyecto iNaturalist</a>
-            <a href="https://drive.google.com/file/d/1OkUXMy9OShvySLoPuEqJf85VMaELQAhJ/view?usp=sharing" target="_blank" class="btn-custom btn-tecnico">Informe técnico</a>
+            <a href="https://drive.google.com/file/d/1_hrHuXEv520qFgb7tRt698ey1420If0G/view?usp=sharing" target="_blank" class="btn-custom btn-tecnico">Informe técnico</a>
         </div>
         <div id="logos-caja" style="position:absolute; bottom:10px; right:10px; z-index:1000; background:rgba(255,255,255,0.9); padding:6px 10px; border-radius:6px; display:flex; gap:10px; align-items:center; box-shadow:0 1px 4px rgba(0,0,0,0.3);">
+            <!-- NUEVO LOGO RCO -->
+            <a href="https://www.linkedin.com/company/red-de-carreteras-de-occidente/?originalSubdomain=mx" target="_blank" title="RCO">
+                <img src="logos/rco_logo.png" style="height:40px;">
+            </a>
             <a href="https://www.instagram.com/ambiomas_org/" target="_blank" title="Ambiomas">
                 <img src="logos/ambiomas.png" style="height:40px;">
             </a>
@@ -817,6 +821,8 @@
         // Panel de capas (overlaysTree) - NUEVO ORDEN
         // ============================================================
         var overlaysTree = [
+            // Capa de observaciones iNaturalist (capa en vivo)
+            {label: "Observaciones proyecto iNaturalist", layer: capaINaturalist},
             {label: '<img src="legend/Reddebrechasycaminos_19.png" /> Red de brechas y caminos', layer: layer_Reddebrechasycaminos_19},
             {label: '<img src="legend/UnidadesderegistroiNaturalist_18.png" /> Unidades de registro iNaturalist', layer: layer_UnidadesderegistroiNaturalist_18},
             {label: '<img src="legend/UnidadesdeMuestreo_17_UMoyamelprocedentedeCerroPrieto0.png" /> Unidades de Muestreo', layer: layer_UnidadesdeMuestreo_17},
