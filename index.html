@@ -180,16 +180,17 @@
 
         <!-- ===== Texto de créditos en el footer ===== -->
         <div id="footer-creditos">
-            Este proyecto fue posible gracias al apoyo de Red de Carreteras de Occidente, an Abertis company.
+            Este proyecto fue posible gracias al apoyo de Empresa. Cita sugerida: Autores (2026). "Restauración forestal en San Felipe" [mapa web]
+        </div>
 
         <!-- ===== Panel de aviso legal (modal) ===== -->
         <div id="modal-aviso">
             <div id="modal-contenido">
-                <h2>Aviso de uso</h2>
+                <h2>📋 Aviso de uso</h2>
                 <p style="color:#555; font-size:14px;">Al utilizar este mapa, aceptas los siguientes términos:</p>
                 <ul>
-                    <li><strong>Solo para fines educativos y académicos</strong></li>
-                    <li><strong>No reproducción total o parcial con fines comerciales sin autorización explícita</strong></li>
+                    <li><strong>✅ Solo para fines educativos y académicos</strong></li>
+                    <li><strong>🚫 No reproducción total o parcial con fines comerciales sin autorización explícita</strong></li>
                 </ul>
                 <div class="checkbox-container">
                     <input type="checkbox" id="chk-acepto">
@@ -204,20 +205,16 @@
         <!-- Contenedor de botones (arriba de los logos) -->
         <div id="botones-container">
             <a href="https://www.inaturalist.org/projects/registro-de-vegetacion-en-un-poligono-de-reforestacion-en-san-felipe-los-alzati-zitacuaro-mexico" target="_blank" class="btn-custom btn-inaturalist">Proyecto iNaturalist</a>
-            <a href="https://drive.google.com/file/d/1_hrHuXEv520qFgb7tRt698ey1420If0G/view?usp=sharing" target="_blank" class="btn-custom btn-tecnico">Informe técnico</a>
+            <a href="https://drive.google.com/file/d/1OkUXMy9OShvySLoPuEqJf85VMaELQAhJ/view?usp=sharing" target="_blank" class="btn-custom btn-tecnico">Informe técnico</a>
         </div>
         <div id="logos-caja" style="position:absolute; bottom:10px; right:10px; z-index:1000; background:rgba(255,255,255,0.9); padding:6px 10px; border-radius:6px; display:flex; gap:10px; align-items:center; box-shadow:0 1px 4px rgba(0,0,0,0.3);">
-    
-    <a href="https://www.linkedin.com/company/red-de-carreteras-de-occidente/?originalSubdomain=mx" target="_blank" title="RCO">
-        <img src="logos/rco_logo.png" style="height:40px;">
-    </a>
-    <a href="https://www.instagram.com/ambiomas_org/" target="_blank" title="Ambiomas">
-        <img src="logos/ambiomas.png" style="height:40px;">
-    </a>
-    <a href="https://focenmexico.org/" target="_blank" title="FOCEN">
-        <img src="logos/focen.png" style="height:40px;">
-    </a>
-</div>
+            <a href="https://www.instagram.com/ambiomas_org/" target="_blank" title="Ambiomas">
+                <img src="logos/ambiomas.png" style="height:40px;">
+            </a>
+            <a href="https://focenmexico.org/" target="_blank" title="FOCEN">
+                <img src="logos/focen.png" style="height:40px;">
+            </a>
+        </div>
 
         <!-- ===== Script para manejar el modal ===== -->
         <script>
@@ -780,8 +777,8 @@
             // Capas en orden de index 2 (de arriba a abajo)
             {label: '<img src="legend/Reddebrechasycaminos_19.png" /> Red de brechas y caminos', layer: layer_Reddebrechasycaminos_19},
             {label: '<img src="legend/UnidadesderegistroiNaturalist_18.png" /> Unidades de registro iNaturalist', layer: layer_UnidadesderegistroiNaturalist_18},
-            // Unidades de Muestreo con leyenda en el panel (como en index 2)
-            {label: 'Unidades de Muestreo<br /><table><tr><td style="text-align: center;"><img src="legend/UnidadesdeMuestreo_17_UMoyamelprocedentedeCerroPrieto0.png" /></td><td>UM oyamel procedente de Cerro Prieto</td></tr><tr><td style="text-align: center;"><img src="legend/UnidadesdeMuestreo_17_UMoyamelprocedentedelRosario1.png" /></td><td>UM oyamel procedente del Rosario</td></tr><tr><td style="text-align: center;"><img src="legend/UnidadesdeMuestreo_17_UMplantacióndepinos2.png" /></td><td>UM plantación de pinos</td></tr></table>', layer: layer_UnidadesdeMuestreo_17},
+            // Unidades de Muestreo - SIN leyenda en el panel (se muestra en simbología flotante)
+            {label: '<img src="legend/UnidadesdeMuestreo_17_UMoyamelprocedentedeCerroPrieto0.png" /> Unidades de Muestreo', layer: layer_UnidadesdeMuestreo_17},
             // Polígonos de reforestación (grupo colapsado)
             {label: '<b>Polígonos de reforestación</b>', collapsed: true, selectAllCheckbox: true, children: [
                 {label: '<img src="legend/ReforestacinoyamelprocedenciaCerroPrieto_16.png" /> Reforestación oyamel procedencia Cerro Prieto', layer: layer_ReforestacinoyamelprocedenciaCerroPrieto_16},
@@ -789,13 +786,13 @@
                 {label: '<img src="legend/readereforestacindeoyamel_14.png" /> Área de reforestación de oyamel', layer: layer_readereforestacindeoyamel_14},
                 {label: '<img src="legend/readereforestacindepinos_13.png" /> Área de reforestación de pinos', layer: layer_readereforestacindepinos_13},
             ]},
-            // Monitoreo con dron (grupo colapsado) - con leyendas en tablas como en index 2
+            // Monitoreo con dron (grupo colapsado) - SIN leyendas en tablas (se muestra en simbología flotante)
             {label: '<b>Monitoreo con dron</b>', collapsed: true, selectAllCheckbox: true, children: [
-                {label: 'Altura promedio de la vegetación (metros)<br /><table><tr><td style="text-align: center;"><img src="legend/Alturapromediodelavegetacinmetros_12_0150.png" /></td><td>0 - 1.5</td></tr><tr><td style="text-align: center;"><img src="legend/Alturapromediodelavegetacinmetros_12_15301.png" /></td><td>1.5 - 3.0</td></tr><tr><td style="text-align: center;"><img src="legend/Alturapromediodelavegetacinmetros_12_30502.png" /></td><td>3.0 - 5.0</td></tr><tr><td style="text-align: center;"><img src="legend/Alturapromediodelavegetacinmetros_12_50703.png" /></td><td>5.0 - 7.0</td></tr><tr><td style="text-align: center;"><img src="legend/Alturapromediodelavegetacinmetros_12_701314.png" /></td><td>7.0 - 13.1</td></tr></table>', layer: layer_Alturapromediodelavegetacinmetros_12},
-                {label: 'Rugosidad (desv. est.) de la vegetación (metros)<br /><table><tr><td style="text-align: center;"><img src="legend/Rugosidaddesvestdelavegetacinmetros_11_01350.png" /></td><td>0 - 1.35</td></tr><tr><td style="text-align: center;"><img src="legend/Rugosidaddesvestdelavegetacinmetros_11_1352601.png" /></td><td>1.35 - 2.60</td></tr><tr><td style="text-align: center;"><img src="legend/Rugosidaddesvestdelavegetacinmetros_11_2603802.png" /></td><td>2.60 - 3.80</td></tr><tr><td style="text-align: center;"><img src="legend/Rugosidaddesvestdelavegetacinmetros_11_3805123.png" /></td><td>3.80 - 5.12</td></tr><tr><td style="text-align: center;"><img src="legend/Rugosidaddesvestdelavegetacinmetros_11_5128294.png" /></td><td>5.12 - 8.29</td></tr></table>', layer: layer_Rugosidaddesvestdelavegetacinmetros_11},
-                {label: 'Cobertura de vegetación > 1 metro (%)<br /><table><tr><td style="text-align: center;"><img src="legend/Coberturadevegetacin1metro_10_Abierta0300.png" /></td><td>Abierta (0% - 30%)</td></tr><tr><td style="text-align: center;"><img src="legend/Coberturadevegetacin1metro_10_Semiabierta30541.png" /></td><td>Semi abierta (30% - 54%)</td></tr><tr><td style="text-align: center;"><img src="legend/Coberturadevegetacin1metro_10_Semicerrada54802.png" /></td><td>Semi cerrada (54% - 80%)</td></tr><tr><td style="text-align: center;"><img src="legend/Coberturadevegetacin1metro_10_Cerrada803.png" /></td><td>Cerrada (> 80%)</td></tr></table>', layer: layer_Coberturadevegetacin1metro_10},
-                {label: 'Promedio NDVI-agosto 2025<br /><table><tr><td style="text-align: center;"><img src="legend/PromedioNDVIagosto2025_9_00300.png" /></td><td>0 - 0.30</td></tr><tr><td style="text-align: center;"><img src="legend/PromedioNDVIagosto2025_9_0300451.png" /></td><td>0.30 - 0.45</td></tr><tr><td style="text-align: center;"><img src="legend/PromedioNDVIagosto2025_9_0450552.png" /></td><td>0.45 - 0.55</td></tr><tr><td style="text-align: center;"><img src="legend/PromedioNDVIagosto2025_9_0550653.png" /></td><td>0.55 - 0.65</td></tr><tr><td style="text-align: center;"><img src="legend/PromedioNDVIagosto2025_9_0650854.png" /></td><td>0.65 - 0.85</td></tr></table>', layer: layer_PromedioNDVIagosto2025_9},
-                {label: 'Promedio NDVI-mayo 2026<br /><table><tr><td style="text-align: center;"><img src="legend/PromedioNDVImayo2026_8_00300.png" /></td><td>0 - 0.30</td></tr><tr><td style="text-align: center;"><img src="legend/PromedioNDVImayo2026_8_0300451.png" /></td><td>0.30 - 0.45</td></tr><tr><td style="text-align: center;"><img src="legend/PromedioNDVImayo2026_8_0450552.png" /></td><td>0.45 - 0.55</td></tr><tr><td style="text-align: center;"><img src="legend/PromedioNDVImayo2026_8_0550653.png" /></td><td>0.55 - 0.65</td></tr><tr><td style="text-align: center;"><img src="legend/PromedioNDVImayo2026_8_0650834.png" /></td><td>0.65 - 0.83</td></tr></table>', layer: layer_PromedioNDVImayo2026_8},
+                {label: "Altura promedio de la vegetación (m)", layer: layer_Alturapromediodelavegetacinmetros_12},
+                {label: "Rugosidad (desv. est.) de la vegetación (m)", layer: layer_Rugosidaddesvestdelavegetacinmetros_11},
+                {label: "Cobertura de vegetación > 1 m (%)", layer: layer_Coberturadevegetacin1metro_10},
+                {label: "Promedio NDVI por parcela - Agosto 2025", layer: layer_PromedioNDVIagosto2025_9},
+                {label: "Promedio NDVI por parcela - Mayo 2026", layer: layer_PromedioNDVImayo2026_8},
                 {label: "NDVI Agosto 2025", layer: layer_NDVIAgosto2025_7},
                 {label: "NDVI Mayo 2026", layer: layer_NDVIMayo2026_6},
                 {label: "RGB Agosto 2025", layer: layer_RGBAgosto2025_5},
@@ -871,7 +868,7 @@
                 '<div><span style="display:inline-block;width:12px;height:12px;background:#a6d96a;"></span> 0.55 - 0.65</div>' +
                 '<div><span style="display:inline-block;width:12px;height:12px;background:#1a9641;"></span> 0.65 - 0.83</div>';
 
-            // Leyenda para Unidades de Muestreo
+            // Leyenda para Unidades de Muestreo (se muestra en simbología flotante)
             var leyendaUnidadesMuestreo = '<b>Unidades de Muestreo</b>' +
                 '<div><span style="display:inline-block;width:12px;height:12px;background:#1b6d35;border:1px solid #1b6d35;"></span> UM oyamel procedente de Cerro Prieto</div>' +
                 '<div><span style="display:inline-block;width:12px;height:12px;background:#b7f482;border:1px solid #b7f482;"></span> UM oyamel procedente del Rosario</div>' +
