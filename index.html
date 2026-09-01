@@ -379,7 +379,7 @@
         map.addLayer(layer_ESRISatellite_3);
 
         // ============================================================
-        // Polígono de intervención San Felipe
+        // Capa: Polígono de intervención San Felipe
         // ============================================================
         function pop_PolgonodeintervencinSanFelipe_3(feature, layer) {
             layer.bindPopup('');
@@ -394,6 +394,9 @@
         bounds_group.addLayer(layer_PolgonodeintervencinSanFelipe_3);
         map.addLayer(layer_PolgonodeintervencinSanFelipe_3);
 
+        // ============================================================
+        // Capas raster: RGB, NDVI
+        // ============================================================
         map.createPane('pane_RGBMayo2026_4');
         map.getPane('pane_RGBMayo2026_4').style.zIndex = 404;
         var img_RGBMayo2026_4 = 'data/RGBMayo2026_4.png';
@@ -419,6 +422,10 @@
         var img_bounds_NDVIAgosto2025_7 = [[19.533239061913232,-100.31281821470333],[19.538177270420185,-100.30240055422462]];
         var layer_NDVIAgosto2025_7 = new L.imageOverlay(img_NDVIAgosto2025_7, img_bounds_NDVIAgosto2025_7, {pane: 'pane_NDVIAgosto2025_7'});
         bounds_group.addLayer(layer_NDVIAgosto2025_7);
+
+        // ============================================================
+        // Capa: Promedio NDVI Mayo 2026
+        // ============================================================
         function pop_PromedioNDVImayo2026_8(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -451,6 +458,10 @@
         map.getPane('pane_PromedioNDVImayo2026_8').style['mix-blend-mode'] = 'normal';
         var layer_PromedioNDVImayo2026_8 = new L.geoJson(json_PromedioNDVImayo2026_8, { attribution: '', interactive: true, dataVar: 'json_PromedioNDVImayo2026_8', layerName: 'layer_PromedioNDVImayo2026_8', pane: 'pane_PromedioNDVImayo2026_8', onEachFeature: pop_PromedioNDVImayo2026_8, style: style_PromedioNDVImayo2026_8_0 });
         bounds_group.addLayer(layer_PromedioNDVImayo2026_8);
+
+        // ============================================================
+        // Capa: Promedio NDVI Agosto 2025
+        // ============================================================
         function pop_PromedioNDVIagosto2025_9(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -483,6 +494,10 @@
         map.getPane('pane_PromedioNDVIagosto2025_9').style['mix-blend-mode'] = 'normal';
         var layer_PromedioNDVIagosto2025_9 = new L.geoJson(json_PromedioNDVIagosto2025_9, { attribution: '', interactive: true, dataVar: 'json_PromedioNDVIagosto2025_9', layerName: 'layer_PromedioNDVIagosto2025_9', pane: 'pane_PromedioNDVIagosto2025_9', onEachFeature: pop_PromedioNDVIagosto2025_9, style: style_PromedioNDVIagosto2025_9_0 });
         bounds_group.addLayer(layer_PromedioNDVIagosto2025_9);
+
+        // ============================================================
+        // Capa: Cobertura de vegetación > 1 metro
+        // ============================================================
         function pop_Coberturadevegetacin1metro_10(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -512,6 +527,10 @@
         map.getPane('pane_Coberturadevegetacin1metro_10').style['mix-blend-mode'] = 'normal';
         var layer_Coberturadevegetacin1metro_10 = new L.geoJson(json_Coberturadevegetacin1metro_10, { attribution: '', interactive: true, dataVar: 'json_Coberturadevegetacin1metro_10', layerName: 'layer_Coberturadevegetacin1metro_10', pane: 'pane_Coberturadevegetacin1metro_10', onEachFeature: pop_Coberturadevegetacin1metro_10, style: style_Coberturadevegetacin1metro_10_0 });
         bounds_group.addLayer(layer_Coberturadevegetacin1metro_10);
+
+        // ============================================================
+        // Capa: Rugosidad (desv. est.) de la vegetación
+        // ============================================================
         function pop_Rugosidaddesvestdelavegetacinmetros_11(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -544,6 +563,10 @@
         map.getPane('pane_Rugosidaddesvestdelavegetacinmetros_11').style['mix-blend-mode'] = 'normal';
         var layer_Rugosidaddesvestdelavegetacinmetros_11 = new L.geoJson(json_Rugosidaddesvestdelavegetacinmetros_11, { attribution: '', interactive: true, dataVar: 'json_Rugosidaddesvestdelavegetacinmetros_11', layerName: 'layer_Rugosidaddesvestdelavegetacinmetros_11', pane: 'pane_Rugosidaddesvestdelavegetacinmetros_11', onEachFeature: pop_Rugosidaddesvestdelavegetacinmetros_11, style: style_Rugosidaddesvestdelavegetacinmetros_11_0 });
         bounds_group.addLayer(layer_Rugosidaddesvestdelavegetacinmetros_11);
+
+        // ============================================================
+        // Capa: Altura promedio de la vegetación
+        // ============================================================
         function pop_Alturapromediodelavegetacinmetros_12(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -576,6 +599,10 @@
         map.getPane('pane_Alturapromediodelavegetacinmetros_12').style['mix-blend-mode'] = 'normal';
         var layer_Alturapromediodelavegetacinmetros_12 = new L.geoJson(json_Alturapromediodelavegetacinmetros_12, { attribution: '', interactive: true, dataVar: 'json_Alturapromediodelavegetacinmetros_12', layerName: 'layer_Alturapromediodelavegetacinmetros_12', pane: 'pane_Alturapromediodelavegetacinmetros_12', onEachFeature: pop_Alturapromediodelavegetacinmetros_12, style: style_Alturapromediodelavegetacinmetros_12_0 });
         bounds_group.addLayer(layer_Alturapromediodelavegetacinmetros_12);
+
+        // ============================================================
+        // Capa: Área de reforestación de pinos
+        // ============================================================
         function pop_readereforestacindepinos_13(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -594,6 +621,10 @@
         map.getPane('pane_readereforestacindepinos_13').style['mix-blend-mode'] = 'normal';
         var layer_readereforestacindepinos_13 = new L.geoJson(json_readereforestacindepinos_13, { attribution: '', interactive: true, dataVar: 'json_readereforestacindepinos_13', layerName: 'layer_readereforestacindepinos_13', pane: 'pane_readereforestacindepinos_13', onEachFeature: pop_readereforestacindepinos_13, style: style_readereforestacindepinos_13_0 });
         bounds_group.addLayer(layer_readereforestacindepinos_13);
+
+        // ============================================================
+        // Capa: Área de reforestación de oyamel
+        // ============================================================
         function pop_readereforestacindeoyamel_14(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -612,6 +643,10 @@
         map.getPane('pane_readereforestacindeoyamel_14').style['mix-blend-mode'] = 'normal';
         var layer_readereforestacindeoyamel_14 = new L.geoJson(json_readereforestacindeoyamel_14, { attribution: '', interactive: true, dataVar: 'json_readereforestacindeoyamel_14', layerName: 'layer_readereforestacindeoyamel_14', pane: 'pane_readereforestacindeoyamel_14', onEachFeature: pop_readereforestacindeoyamel_14, style: style_readereforestacindeoyamel_14_0 });
         bounds_group.addLayer(layer_readereforestacindeoyamel_14);
+
+        // ============================================================
+        // Capa: Reforestación oyamel procedencia Rosario
+        // ============================================================
         function pop_ReforestacinoyamelprocedenciaRosario_15(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -630,6 +665,10 @@
         map.getPane('pane_ReforestacinoyamelprocedenciaRosario_15').style['mix-blend-mode'] = 'normal';
         var layer_ReforestacinoyamelprocedenciaRosario_15 = new L.geoJson(json_ReforestacinoyamelprocedenciaRosario_15, { attribution: '', interactive: true, dataVar: 'json_ReforestacinoyamelprocedenciaRosario_15', layerName: 'layer_ReforestacinoyamelprocedenciaRosario_15', pane: 'pane_ReforestacinoyamelprocedenciaRosario_15', onEachFeature: pop_ReforestacinoyamelprocedenciaRosario_15, style: style_ReforestacinoyamelprocedenciaRosario_15_0 });
         bounds_group.addLayer(layer_ReforestacinoyamelprocedenciaRosario_15);
+
+        // ============================================================
+        // Capa: Reforestación oyamel procedencia Cerro Prieto
+        // ============================================================
         function pop_ReforestacinoyamelprocedenciaCerroPrieto_16(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -648,6 +687,10 @@
         map.getPane('pane_ReforestacinoyamelprocedenciaCerroPrieto_16').style['mix-blend-mode'] = 'normal';
         var layer_ReforestacinoyamelprocedenciaCerroPrieto_16 = new L.geoJson(json_ReforestacinoyamelprocedenciaCerroPrieto_16, { attribution: '', interactive: true, dataVar: 'json_ReforestacinoyamelprocedenciaCerroPrieto_16', layerName: 'layer_ReforestacinoyamelprocedenciaCerroPrieto_16', pane: 'pane_ReforestacinoyamelprocedenciaCerroPrieto_16', onEachFeature: pop_ReforestacinoyamelprocedenciaCerroPrieto_16, style: style_ReforestacinoyamelprocedenciaCerroPrieto_16_0 });
         bounds_group.addLayer(layer_ReforestacinoyamelprocedenciaCerroPrieto_16);
+
+        // ============================================================
+        // Capa: Unidades de Muestreo
+        // ============================================================
         function pop_UnidadesdeMuestreo_17(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -683,7 +726,7 @@
         bounds_group.addLayer(layer_UnidadesdeMuestreo_17);
 
         // ============================================================
-        // Nueva capa: Unidades de registro iNaturalist
+        // Capa NUEVA: Unidades de registro iNaturalist
         // ============================================================
         function pop_UnidadesderegistroiNaturalist_18(feature, layer) {
             layer.bindPopup('');
@@ -698,7 +741,7 @@
         bounds_group.addLayer(layer_UnidadesderegistroiNaturalist_18);
 
         // ============================================================
-        // Red de brechas y caminos (renombrada)
+        // Capa: Red de brechas y caminos (renombrada)
         // ============================================================
         function pop_Reddebrechasycaminos_19(feature, layer) {
             var popupContent = '<table>\
@@ -771,22 +814,18 @@
         setInterval(cargarObservacionesINaturalist, 10 * 60 * 1000);
 
         // ============================================================
-        // Panel de capas (overlaysTree) - NUEVO ORDEN según index 2
+        // Panel de capas (overlaysTree) - NUEVO ORDEN
         // ============================================================
         var overlaysTree = [
-            // Capas en orden de index 2 (de arriba a abajo)
             {label: '<img src="legend/Reddebrechasycaminos_19.png" /> Red de brechas y caminos', layer: layer_Reddebrechasycaminos_19},
             {label: '<img src="legend/UnidadesderegistroiNaturalist_18.png" /> Unidades de registro iNaturalist', layer: layer_UnidadesderegistroiNaturalist_18},
-            // Unidades de Muestreo - SIN leyenda en el panel (se muestra en simbología flotante)
             {label: '<img src="legend/UnidadesdeMuestreo_17_UMoyamelprocedentedeCerroPrieto0.png" /> Unidades de Muestreo', layer: layer_UnidadesdeMuestreo_17},
-            // Polígonos de reforestación (grupo colapsado)
             {label: '<b>Polígonos de reforestación</b>', collapsed: true, selectAllCheckbox: true, children: [
                 {label: '<img src="legend/ReforestacinoyamelprocedenciaCerroPrieto_16.png" /> Reforestación oyamel procedencia Cerro Prieto', layer: layer_ReforestacinoyamelprocedenciaCerroPrieto_16},
                 {label: '<img src="legend/ReforestacinoyamelprocedenciaRosario_15.png" /> Reforestación oyamel procedencia Rosario', layer: layer_ReforestacinoyamelprocedenciaRosario_15},
                 {label: '<img src="legend/readereforestacindeoyamel_14.png" /> Área de reforestación de oyamel', layer: layer_readereforestacindeoyamel_14},
                 {label: '<img src="legend/readereforestacindepinos_13.png" /> Área de reforestación de pinos', layer: layer_readereforestacindepinos_13},
             ]},
-            // Monitoreo con dron (grupo colapsado) - SIN leyendas en tablas (se muestra en simbología flotante)
             {label: '<b>Monitoreo con dron</b>', collapsed: true, selectAllCheckbox: true, children: [
                 {label: "Altura promedio de la vegetación (m)", layer: layer_Alturapromediodelavegetacinmetros_12},
                 {label: "Rugosidad (desv. est.) de la vegetación (m)", layer: layer_Rugosidaddesvestdelavegetacinmetros_11},
@@ -798,9 +837,7 @@
                 {label: "RGB Agosto 2025", layer: layer_RGBAgosto2025_5},
                 {label: "RGB Mayo 2026", layer: layer_RGBMayo2026_4},
             ]},
-            // Polígono de intervención San Felipe (al final, como en index 2)
             {label: '<img src="legend/PolgonodeintervencinSanFelipe_3.png" /> Polígono de intervención San Felipe', layer: layer_PolgonodeintervencinSanFelipe_3},
-            // Mapas base agrupados en "Mapas base" (MANTENIDO de index 1)
             {label: '<b>Mapas base</b>', collapsed: true, selectAllCheckbox: false, children: [
                 {label: "ESRI Satellite", layer: layer_ESRISatellite_3, radioGroup: 'bm' },
                 {label: "ESRI Topo", layer: layer_ESRITopo_2, radioGroup: 'bm' },
