@@ -236,16 +236,16 @@
             btnAceptar.addEventListener('click', function() {
                 if (checkbox.checked) {
                     modal.classList.add('hidden');
-                    // Guardar preferencia en localStorage para no mostrar de nuevo
+                    // Guardar preferencia en sessionStorage para no mostrar de nuevo, solo hasta después de cerrar ventana
                     try {
-                        localStorage.setItem('aviso-aceptado', 'true');
+                        sessionStorage.setItem('aviso-aceptado', 'true');
                     } catch(e) {}
                 }
             });
 
             // Si ya aceptó antes, ocultar el modal directamente
             try {
-                if (localStorage.getItem('aviso-aceptado') === 'true') {
+                if (sessionStorage.getItem('aviso-aceptado') === 'true') {
                     modal.classList.add('hidden');
                 }
             } catch(e) {}
